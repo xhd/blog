@@ -28,7 +28,7 @@ module.exports = {
       host : "123.56.99.220",
       ref  : "origin/master",
       repo : "https://github.com/xhd/blog",
-      path : "/var/www/production",
+      path : "/",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.config.js --env production"
     }
   }
