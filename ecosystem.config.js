@@ -7,7 +7,7 @@ module.exports = {
 
     // First application
     {
-      name      : "API",
+      name      : "blog",
       script    : "./bin/www",
       env: {
         COMMON_VARIABLE: "true"
@@ -15,7 +15,7 @@ module.exports = {
       env_production : {
         NODE_ENV: "production"
       }
-    },
+    }
   ],
 
   /**
@@ -24,12 +24,12 @@ module.exports = {
    */
   deploy : {
     production : {
-        user : "root",
-        host : "123.56.99.220",
-        ref  : "origin/master",
-        repo : "https://github.com/iun007/blog.git",
-        path : "/var/production",
+      user : "root",
+      host : "123.56.99.220",
+      ref  : "origin/master",
+      repo : "https://github.com/xhd/blog.git",
+      path : "/var/www/production",
       "post-deploy" : "npm install && pm2 startOrRestart ecosystem.config.js --env production"
-    },
+    }
   }
 }
